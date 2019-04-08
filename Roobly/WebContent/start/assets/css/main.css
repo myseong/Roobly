@@ -1641,7 +1641,7 @@ input, select, textarea {
 			background:#05000a;
 			top:auto;
 			left:auto;
-			width:auto;
+			width:100%;
 			height:auto;
 			display:none;
 		}
