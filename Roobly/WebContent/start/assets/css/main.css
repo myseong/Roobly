@@ -1639,9 +1639,10 @@ input, select, textarea {
 		.search-box{
 			position:absolute;
 			background:#05000a;
-			top:auto;
-			left:auto;
-			width:100%;
+			top:70px;
+			left:10%;
+			right:10%;
+			width:auto;
 			height:auto;
 			display:none;
 		}

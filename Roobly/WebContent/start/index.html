@@ -40,16 +40,17 @@
 			</div>
 			<nav>
 				<ul>
-					<li><a href="#intro">소개</a></li>
+					<li><a href="#intro">so</a></li>
 					<li><a href="../main/index.html">홈페이지</a></li>
 					<li><a href="#login">로그인</a></li>
 					<li><a href="#" class="searchBtn" id="searchBtn"><i class="fa fa-search"></i></a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
 				</ul>
-			</nav>
-			<div class="search-box" id="search-box">
+				<div class="search-box" id="search-box">
 			<input type="text">
 		</div>
+			</nav>
+			
 		</header>
 		
 		
@@ -182,7 +183,7 @@
 						</tr>
 						<tr class="register" height="30">
 							<td width="15%"><label for="demo-phone">휴대전화</label></td>
-							<td><input type="tel" name="wUserCellPhone" placeholder="000-0000-0000"/></td>
+							<td><input type="tel" name="wUserCellPhone" placeholder="-(하이픈) 없이 기입"/></td>
 						</tr>
 						<tr class="register" height="30">
 							<td width="15%"><label for="demo-email">이메일</label></td>
@@ -203,6 +204,18 @@
 							<br />
 							<input type="text" name="wRestAddress" placeholder="나머지 주소"
 								size="70" /></td>
+						</tr>
+						<tr>
+							<td width="15%"><label for="demo-email">질문</label></td>
+							<td>
+								<select name="question">
+									<option value="1">자신이 다녔던 초등학교 이름은?</option>
+									<option value="2">아버지의 이름은?</option>
+									<option value="3">자신이 감명깊게 본 책은?</option>
+									<option value="4">자신의 어렸을 적 별명은?</option>
+								</select>
+							</td>
+							<td><input type="text" name="question" placeholder="답변"/></td>
 						</tr>
 
 					</table>
