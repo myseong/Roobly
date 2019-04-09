@@ -3,6 +3,9 @@ package Roobly;
 import java.sql.*;
 import java.util.*;
 
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
+
 public class RooblyDAO {
 
 	private DBConnectionMgr pool=null;
@@ -50,4 +53,25 @@ public class RooblyDAO {
 		}
 		return check;
 	}
+	
+	//2)회원가입->중복 id를 체크인 해주는 메서드가 필요
+		public boolean checkId(String id) {
+			//1.DB연결
+					boolean check=false;
+					//2.실행시킬 SQL->반환값 처리
+					try {
+						con=pool.getConnection();
+						sql="select id from member where  id=?";
+						pstmt=con.prepareStatement(sql);
+						pstmt.setString(1, id);
+						rs=pstmt.executeQuery();
+						check=rs.next();//데이터가 존재->true, 없으면 ->false
+					}catch(Exception e) {
+						System.out.println("checkId()실행 에러유발->"+e);
+					}finally {
+						pool.freeConnection(con,pstmt,rs);
+					}
+					return check;
+					//3.DB연결해제
+		}
 }
