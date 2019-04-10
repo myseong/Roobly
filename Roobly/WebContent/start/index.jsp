@@ -148,6 +148,7 @@
 							<td width="15%"><label for="demo-id">아이디</label></td>
 							<td><input type="text" name="wUserID" placeholder="아이디"/>&nbsp;<label for="demo-id-check"><a
 								href="javascript:idCheck(this.form.wUserID.value)">[아이디 중복 검사]</a></label>
+								<label id="ducheck"></label>
 								<input type="hidden" name="wIdConfirm" value="0"/></td>
 						</tr>
 						<tr class="register" height="30">
@@ -188,8 +189,8 @@
 							<td width="15%"><label for="demo-addr">주 소</label></td>
 							<td><input type="text" size="10" name="wPostCode"
 								id="postcode" placeholder="우편번호" readonly="readonly"
-								onclick="DaumPostcode()"> <input type="button"
-								onclick="DaumPostcode()" value="우편번호 찾기" class="primary"><br>
+								onClick="zipCheck()"> <input type="button"
+								onClick="zipCheck()" value="우편번호 찾기" class="primary"><br>
 							<br /> <input type="text" size="30" name="wRoadAddress"
 								id="roadAddress" placeholder="주소" readonly="readonly"
 								onclick="DaumPostcode()"> <input type="text" size="30"
@@ -221,7 +222,7 @@
 					</table>
 					<br />
 					<ul class="actions">
-						<li><input type="button" value="회원가입" class="primary" onclick="inputCheck()"/></li>
+						<li><input type="button" value="회원가입" class="primary" onClick="inputCheck()"/></li>
 					</ul>
 				</form>
 			</article>

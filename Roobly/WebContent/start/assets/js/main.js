@@ -401,59 +401,91 @@
 })(jQuery);
 
 function inputCheck(){
-	if(document.regForm.wUserID.value==""){
+	if($("wUserID").value==""){
 		alert("아이디를 입력해 주세요.");
-		document.regForm.wUserID.focus();
+		$("wUserID").focus();
 		return;
 	}
-	if(document.regForm.wUserPW.value==""){
+	if($("wUserPW").value==""){
 		alert("비밀번호를 입력해 주세요.");
-		document.regForm.wUserPW.focus();
+		$("wUserPW").focus();
 		return;
 	}
-	if(document.regForm.wUserPWConfirm.value==""){
+	if($("wUserPWConfirm").value==""){
 		alert("비밀번호를 확인해 주세요");
-		document.regForm.wUserPWConfirm.focus();
+		$("wUserPWConfirm").focus();
 		return;
 	}
-	if(document.regForm.wUserName.value==""){
+	if($("wUserName").value==""){
 		alert("이름을 입력해 주세요.");
-		document.regForm.wUserName.focus();
+		$("wUserName").focus();
 		return;
 	}
-	if(document.regForm.demo-priority.value=="0"){
+	if($("demo-priority").value=="0"){
 		alert("성별을 선택해 주세요.");
-		document.regForm.demo-priority.focus();
+		$("demo-priority").focus();
 		return;
 	}
-	if(document.regForm.wUserNick.value==""){
+	if($("wUserNick").value==""){
 		alert("별명을 입력해 주세요.");
-		document.regForm.wUserNick.focus();
+		$("wUserNick").focus();
 		return;
 	}
-	if(document.regForm.wUserEmail.value==""){
+	if($("wUserEmail.value")==""){
 		alert("이메일을 입력해 주세요.");
-		document.regForm.wUserEmail.focus();
+		$("wUserEmail").focus();
 		return;
 	}
-	if(document.regForm.wAnswer.value==""){
+	if($("wAnswer").value==""){
 		alert("질문의 답을 입력해 주세요.");
-		document.regForm.wAnswer.focus();
+		$("wAnswer").focus();
 		return;
 	}
-	if(document.regForm.wUserPW.value != document.regForm.wUserPWConfirm.value){
+	if($("wUserPW").value != $("wUserPWConfirm").value){
 		alert("비밀번호가 일치하지 않습니다.");
-		document.regForm.wUserPWConfirm.focus();
+		$("wUserPWConfirm").focus();
 		return;
 	}
-	document.regForm.submit();
+	$("regForm").submit();
 }
-function idCheck(wUserID){
-	   if(document.regForm.wUserID.value==""){
-		   alert("아이디를 먼저 입력하세요")
-		   document.regForm.wUserID.focus()
-	   }else{ 
-		   url="IdCheck.jsp?wUserID="+wUserID
-		   window.open(url,"post","left=450,top=150,width=300,height=150")
-	   }
+var xhrObject;
+
+function createXHR(){
+	 if(window.XMLHttpRequest){
+	        xhrObject=new XMLHttpRequest()
+	    }
+}
+
+function idCheck(id){
+	if(id==""){
+		var wUserID=$("ducheck")
+		$("ducheck").innerHTML="<font color='red'><b>아이디 입력하세요</b></font>"
+		$("wUserID").focus();
+		return false;
 	}
+	createXHR()
+	var url="http://localhost:8090/Roobly/IdCheck.jsp?"+getParameterValues()
+	xhrObject.onreadystatechange=resultProcess
+	xhrObject.open("Get",url,true);
+	xhrObject.send(null);
+	$("wIdConfirm").value=1;
+}
+function getParameterValues(){
+	var wUserID=$("wUserID").value
+	return "wUserID="+wUserID+"&timestamp="+new Date().getTime()
+}
+
+function resultProcess(){
+	if(xhrObject.readyState==4){
+		if(xhrObject.status==200){
+			var result=xhrObject.responseText;
+			$("ducheck").innerHTML=result;
+		}
+	}
+}
+
+function zipCheck(){
+    url="ZipCheck.jsp?check=y"
+    window.open(url,"post","left=400,top=220,width=500,height=300,"+
+    		"menubar=no,status=yes,toolbar=no,scrollbars=yes")
+}
