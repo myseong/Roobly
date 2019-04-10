@@ -50,4 +50,19 @@ public class RooblyDAO {
 		}
 		return check;
 	}
+	
+	public boolean checkId(String id) {
+				boolean check=false;
+				try {
+					con=pool.getConnection();
+					pstmt=con.prepareStatement("select id from member where  id=?");
+					pstmt.setString(1, id);
+					rs=pstmt.executeQuery();
+					check=rs.next();
+				}catch(Exception e) {
+				}finally {
+					pool.freeConnection(con,pstmt,rs);
+				}
+				return check;
+	}
 }

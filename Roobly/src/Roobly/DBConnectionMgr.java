@@ -40,7 +40,7 @@ public class DBConnectionMgr {
     private Vector connections = new Vector(10);
     /*   MySQL  */
 	private String _driver = "org.gjt.mm.mysql.Driver",
-    _url = "jdbc:mysql://localhost:3306/mydb?useUnicode=true&characterEncoding=UTF-8",
+    _url = "jdbc:mysql://localhost:3306/roobly?useUnicode=true&characterEncoding=UTF-8",
     _user = "root",
     _password = "1234";
 

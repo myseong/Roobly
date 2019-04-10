@@ -399,3 +399,61 @@
 					});
 
 })(jQuery);
+
+function inputCheck(){
+	if(document.regForm.wUserID.value==""){
+		alert("아이디를 입력해 주세요.");
+		document.regForm.wUserID.focus();
+		return;
+	}
+	if(document.regForm.wUserPW.value==""){
+		alert("비밀번호를 입력해 주세요.");
+		document.regForm.wUserPW.focus();
+		return;
+	}
+	if(document.regForm.wUserPWConfirm.value==""){
+		alert("비밀번호를 확인해 주세요");
+		document.regForm.wUserPWConfirm.focus();
+		return;
+	}
+	if(document.regForm.wUserName.value==""){
+		alert("이름을 입력해 주세요.");
+		document.regForm.wUserName.focus();
+		return;
+	}
+	if(document.regForm.demo-priority.value=="0"){
+		alert("성별을 선택해 주세요.");
+		document.regForm.demo-priority.focus();
+		return;
+	}
+	if(document.regForm.wUserNick.value==""){
+		alert("별명을 입력해 주세요.");
+		document.regForm.wUserNick.focus();
+		return;
+	}
+	if(document.regForm.wUserEmail.value==""){
+		alert("이메일을 입력해 주세요.");
+		document.regForm.wUserEmail.focus();
+		return;
+	}
+	if(document.regForm.wAnswer.value==""){
+		alert("질문의 답을 입력해 주세요.");
+		document.regForm.wAnswer.focus();
+		return;
+	}
+	if(document.regForm.wUserPW.value != document.regForm.wUserPWConfirm.value){
+		alert("비밀번호가 일치하지 않습니다.");
+		document.regForm.wUserPWConfirm.focus();
+		return;
+	}
+	document.regForm.submit();
+}
+function idCheck(wUserID){
+	   if(document.regForm.wUserID.value==""){
+		   alert("아이디를 먼저 입력하세요")
+		   document.regForm.wUserID.focus()
+	   }else{ 
+		   url="IdCheck.jsp?wUserID="+wUserID
+		   window.open(url,"post","left=450,top=150,width=300,height=150")
+	   }
+	}

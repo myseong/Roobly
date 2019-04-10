@@ -5,11 +5,14 @@ public class MemberDTO {
 	private String id;
 	private String passwd;
 	private String name;
+	private Boolean gender;
 	private String nick;
 	private String email;
 	private String phone;
 	private String zipcode;
 	private String address;
+	private int question;
+	private String answer;
 	
 	public String getId() {
 		return id;
@@ -28,6 +31,12 @@ public class MemberDTO {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public Boolean getGender() {
+		return gender;
+	}
+	public void setGender(Boolean gender) {
+		this.gender = gender;
 	}
 	public String getNick() {
 		return nick;
@@ -58,6 +67,18 @@ public class MemberDTO {
 	}
 	public void setAddress(String address) {
 		this.address = address;
+	}
+	public int getQuestion() {
+		return question;
+	}
+	public void setQuestion(int question) {
+		this.question = question;
+	}
+	public String getAnswer() {
+		return answer;
+	}
+	public void setAnswer(String answer) {
+		this.answer = answer;
 	}
 	
 	
