@@ -399,3 +399,93 @@
 					});
 
 })(jQuery);
+
+function inputCheck(){
+	if($("wUserID").value==""){
+		alert("아이디를 입력해 주세요.");
+		$("wUserID").focus();
+		return;
+	}
+	if($("wUserPW").value==""){
+		alert("비밀번호를 입력해 주세요.");
+		$("wUserPW").focus();
+		return;
+	}
+	if($("wUserPWConfirm").value==""){
+		alert("비밀번호를 확인해 주세요");
+		$("wUserPWConfirm").focus();
+		return;
+	}
+	if($("wUserName").value==""){
+		alert("이름을 입력해 주세요.");
+		$("wUserName").focus();
+		return;
+	}
+	if($("demo-priority").value=="0"){
+		alert("성별을 선택해 주세요.");
+		$("demo-priority").focus();
+		return;
+	}
+	if($("wUserNick").value==""){
+		alert("별명을 입력해 주세요.");
+		$("wUserNick").focus();
+		return;
+	}
+	if($("wUserEmail.value")==""){
+		alert("이메일을 입력해 주세요.");
+		$("wUserEmail").focus();
+		return;
+	}
+	if($("wAnswer").value==""){
+		alert("질문의 답을 입력해 주세요.");
+		$("wAnswer").focus();
+		return;
+	}
+	if($("wUserPW").value != $("wUserPWConfirm").value){
+		alert("비밀번호가 일치하지 않습니다.");
+		$("wUserPWConfirm").focus();
+		return;
+	}
+	$("regForm").submit();
+}
+var xhrObject;
+
+function createXHR(){
+	 if(window.XMLHttpRequest){
+	        xhrObject=new XMLHttpRequest()
+	    }
+}
+
+function idCheck(id){
+	if(id==""){
+		var wUserID=$("ducheck")
+		$("ducheck").innerHTML="<font color='red'><b>아이디 입력하세요</b></font>"
+		$("wUserID").focus();
+		return false;
+	}
+	createXHR()
+	var url="http://localhost:8090/Roobly/IdCheck.jsp?"+getParameterValues()
+	xhrObject.onreadystatechange=resultProcess
+	xhrObject.open("Get",url,true);
+	xhrObject.send(null);
+	$("wIdConfirm").value=1;
+}
+function getParameterValues(){
+	var wUserID=$("wUserID").value
+	return "wUserID="+wUserID+"&timestamp="+new Date().getTime()
+}
+
+function resultProcess(){
+	if(xhrObject.readyState==4){
+		if(xhrObject.status==200){
+			var result=xhrObject.responseText;
+			$("ducheck").innerHTML=result;
+		}
+	}
+}
+
+function zipCheck(){
+    url="ZipCheck.jsp?check=y"
+    window.open(url,"post","left=400,top=220,width=500,height=300,"+
+    		"menubar=no,status=yes,toolbar=no,scrollbars=yes")
+}

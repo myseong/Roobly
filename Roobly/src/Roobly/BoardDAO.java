@@ -26,6 +26,73 @@ public class BoardDAO {  //MemberDAO
 	//1.페이징 처리를 위해서 전체 레코드수를 구해와야한다.
 	//select count(*) from board->select count(*) from member; ->getMemberCount()
 	
+	public String getTitle(String url) {
+		String title="1234"; //타이틀 이름
+		try {
+			con=pool.getConnection();
+			System.out.println("con="+con);
+			sql="select title from blog where url=?"; //url를 기본키로 해당블로그 title 이름을 출력
+			pstmt=con.prepareStatement(sql);
+			pstmt.setString(1, url);
+			rs=pstmt.executeQuery();
+			if(rs.next()) { //보여주는 결과가 있다면
+				title=rs.getString(1);// 변수명=rs.get자료형(필드명 또는 인덱스번호)
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("getTitle()메서드 에러"+e);
+		}finally {
+			pool.freeConnection(con, pstmt, rs);
+		}
+		return title;
+	}
+			
+	public int getB_numCount(String url) {
+		int b_numCount=3; //상단게시판 개수
+		try {
+			con=pool.getConnection();
+			System.out.println("con="+con);
+			sql="select count(*) from board where url=?"; //url를 기본키로 해당블로그 board 개수를 출력
+			pstmt=con.prepareStatement(sql);
+			pstmt.setString(1, url);
+			rs=pstmt.executeQuery();
+			if(rs.next()) { //보여주는 결과가 있다면
+				b_numCount=rs.getInt(1);// 변수명=rs.get자료형(필드명 또는 인덱스번호)
+				                       //필드명이 아니기때문에 select ~ from 사이에 나오는 순서
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("getB_numCount()메서드 에러"+e);
+		}finally {
+			pool.freeConnection(con, pstmt, rs);
+		}
+		return b_numCount;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public int getArticleCount() { //->getMemberCount()
 		int x=0;//레코드갯수
 		

@@ -252,7 +252,7 @@ li {
 }
 
 .font-shadow-into-light {
-    font-family: 'Shadows Into Light Two', cursive !important;
+    /* font-family: 'Shadows Into Light Two', cursive !important; */
 }
 
 .yummy-table {
@@ -700,7 +700,19 @@ li {
     font-size: 12px;
     color: #b5aeba;
     display: inline-block;
-    border: 1px solid #ebebeb;
+    border: 1px solid #bcbcbc;
+    border-radius: 30px;
+    height: 40px;
+    min-width: 170px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.single-post .read-more-sample {
+    font-size: 12px;
+    color: #000;
+    display: inline-block;
+    border: 1px solid #000;
     border-radius: 30px;
     height: 40px;
     min-width: 170px;
@@ -712,6 +724,10 @@ li {
 .single-post .read-more:hover {
     color: #000;
     border: 1px solid #000;
+}
+
+.single-post .read-more-sample:hover {
+    background-color: #bcbcbc;
 }
 
 /* List Blog Area CSS */
