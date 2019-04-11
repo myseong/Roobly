@@ -1139,7 +1139,8 @@ li {
 .pagination-area {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     -ms-grid-row-align: center;
@@ -1428,7 +1429,7 @@ li {
 .comment-wrapper .comment-content a {
     min-width: 80px;
     height: 30px;
-    border: 1px solid #ebebeb;
+    border: 1px solid #bcbcbc;
     line-height: 30px;
     font-size: 12px;
     text-align: center;
