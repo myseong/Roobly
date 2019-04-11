@@ -9,7 +9,7 @@ public class BoardDTO {
 	private String subject; // 글제목
 	private String email; // 이메일
 	private String content; // 글내용
-	private String passwd; // 암호
+	private String passwd; // 암호3
 
 	private Timestamp reg_date; // 작성날짜
 	private int readcount; // 조회수 ->default ->0을 부여
