@@ -15,7 +15,7 @@
 			String blog_title="Roobly";
 
 			//nav
-			int size=3;
+			int size=4;
 
 			//블로그 주인 정보
 		 	String name="Eki";
