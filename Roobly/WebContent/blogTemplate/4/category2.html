@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>블로그 이름</title>
+    <title>Category - Wordsmith</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/add.css">
 
     <!-- script
     ================================================== -->
@@ -50,8 +49,7 @@
 
         <div class="header__logo">
             <a class="logo" href="index.html">
-            	<span style="color: black; font-weight:bold; font-size:25px;">블로그 이름</span>
-                <!-- <img src="images/logo.svg" alt="Homepage"> -->
+                <img src="images/logo.svg" alt="Homepage">
             </a>
         </div> <!-- end header__logo -->
 
@@ -60,8 +58,8 @@
 
             <form role="search" method="get" class="header__search-form" action="#">
                 <label>
-                    <!-- <span class="hide-content">Search for:</span> -->									<!-- title="Search for:"  -->
-                    <input type="search" class="search-field" value="" title="Search for:" name="s" autocomplete="off" placeholder="검색어를 입력하세요">
+                    <span class="hide-content">Search for:</span>
+                    <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
                 </label>
                 <input type="submit" class="search-submit" value="Search">
             </form>
@@ -76,8 +74,8 @@
             <h2 class="header__nav-heading h6">Navigate to</h2>
 
             <ul class="header__nav">
-                <li class="current active"><a href="index.html" title="">Home</a></li>
-                <!-- <li class="has-children">
+                <li><a href="index.html" title="">Home</a></li>
+                <li class="has-children current">
                     <a href="#0" title="">Categories</a>
                     <ul class="sub-menu">
                         <li><a href="category.html">Lifestyle</a></li>
@@ -99,7 +97,7 @@
                 <li><a href="style-guide.html" title="">Styles</a></li>
                 <li><a href="page-about.html" title="">About</a></li>
                 <li><a href="page-contact.html" title="">Contact</a></li>
- -->            </ul> <!-- end header__nav -->
+            </ul> <!-- end header__nav -->
 
             <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
 
@@ -108,118 +106,32 @@
     </header> <!-- s-header -->
 
 
-    <!-- featured 
-    ================================================== -->
-    <section class="s-featured">
-        <div class="row">
-            <div class="col-full">
-
-                <div class="featured-slider featured" data-aos="zoom-in">
-
-                    <div class="featured__slide">
-                        <div class="entry">
-																<!-- style="background-image:url('images/thumbs/featured/featured-guitarman.jpg');" -->
-                            <div class="entry__background"><img src="http://placehold.it/1000x800"></div>
-                            
-                            <div class="entry__content">
-                                <!-- <span class="entry__category"><a href="#0">Music</a></span> -->
-
-                                <h1><a href="#0" title="">작성된 게시글이 없습니다.<br>게시글을 작성해주세요.</a></h1>
-                                <a href="#" class="read-more-sample">글쓰기</a>
-
-                                <!-- <div class="entry__info">
-                                    <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="images/avatars/user-05.jpg" alt="">
-                                    </a>
-                                    <ul class="entry__meta">
-                                        <li><a href="#0">작성자</a></li>
-                                        <li>작성날짜</li>
-                                    </ul>
-                                </div> -->
-                            </div> <!-- end entry__content -->
-                            
-                        </div> <!-- end entry -->
-                    </div> <!-- end featured__slide -->
-
-                    <div class="featured__slide">
-                        <div class="entry">
-																<!-- style="background-image:url('images/thumbs/featured/featured-guitarman.jpg');" -->
-                            <div class="entry__background"><img src="http://placehold.it/1000x800"></div>
-                            
-                            <div class="entry__content">
-                                <!-- <span class="entry__category"><a href="#0">Music</a></span> -->
-
-                                <h1><a href="#0" title="">작성된 게시글이 없습니다.<br>게시글을 작성해주세요.</a></h1>
-                                <a href="#" class="read-more-sample">글쓰기</a>
-
-                               <!--  <div class="entry__info">
-                                    <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="images/avatars/user-05.jpg" alt="">
-                                    </a>
-                                    <ul class="entry__meta">
-                                        <li><a href="#0">작성자</a></li>
-                                        <li>작성날짜</li>
-                                    </ul>
-                                </div> -->
-                            </div> <!-- end entry__content -->
-                            
-                        </div> <!-- end entry -->
-                    </div> <!-- end featured__slide -->
-
-                   <div class="featured__slide">
-                        <div class="entry">
-																<!-- style="background-image:url('images/thumbs/featured/featured-guitarman.jpg');" -->
-                            <div class="entry__background"><img src="http://placehold.it/1000x800"></div>
-                            
-                            <div class="entry__content">
-                                <!-- <span class="entry__category"><a href="#0">Music</a></span> -->
-
-                                <h1><a href="#0" title="">작성된 게시글이 없습니다.<br>게시글을 작성해주세요.</a></h1>
-                                <a href="#" class="read-more-sample">글쓰기</a>
-
-                                <!-- <div class="entry__info">
-                                    <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="images/avatars/user-05.jpg" alt="">
-                                    </a>
-                                    <ul class="entry__meta">
-                                        <li><a href="#0">작성자</a></li>
-                                        <li>작성날짜</li>
-                                    </ul>
-                                </div> -->
-                            </div> <!-- end entry__content -->
-                            
-                        </div> <!-- end entry -->
-                    </div> <!-- end featured__slide -->
-                    
-                </div> <!-- end featured -->
-
-            </div> <!-- end col-full -->
-        </div>
-    </section> <!-- end s-featured -->
-
-
     <!-- s-content
     ================================================== -->
-    <section class="s-content">
+    <section class="s-content s-content--top-padding">
+
+        <div class="row narrow">
+            <div class="col-full s-content__header" data-aos="fade-up">
+                <h1 class="display-1 display-1--with-line-sep">Category: Lifestyle</h1>
+                <p class="lead">Dolor similique vitae. Exercitationem quidem occaecati iusto. Id non vitae enim quas error dolor maiores ut. Exercitationem earum ut repudiandae optio veritatis animi nulla qui dolores.</p>
+            </div>
+        </div>
         
-        <div class="row entries-wrap wide">
+        <div class="row entries-wrap add-top-padding wide">
             <div class="entries">
 
-				<!-- ==========작성된 게시글이 없을 때 ===========-->
                 <article class="col-block">
                     
-                    <div class="item-entry-2" data-aos="zoom-in">
+                    <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
-                            <!-- <a href="single-standard.html" class="item-entry__thumb-link">
+                            <a href="single-standard.html" class="item-entry__thumb-link">
                                 <img src="images/thumbs/post/lamp-400.jpg" 
-                                     srcset="images/thumbs/post/lamp-400.jpg 1x, images/thumbs/post/lamp-800.jpg 2x" alt="">
-                            </a> -->
+                                        srcset="images/thumbs/post/lamp-400.jpg 1x, images/thumbs/post/lamp-800.jpg 2x" alt="">
+                            </a>
                         </div>
         
-                        <div class="item-entry__text">   
-                        	<h4>작성된 게시글이 없습니다.</h4>
-							<a href="#" class="read-more-sample-2">글쓰기</a> 
-                            <!-- <div class="item-entry__cat">
+                        <div class="item-entry__text">
+                            <div class="item-entry__cat">
                                 <a href="category.html">Design</a> 
                             </div>
     
@@ -227,20 +139,19 @@
                                 
                             <div class="item-entry__date">
                                 <a href="single-standard.html">June 15, 2018</a>
-                            </div> -->
+                            </div>
                         </div>
-                    </div> <!--item-entry-->
+                    </div> <!-- item-entry -->
 
                 </article> <!-- end article -->
-      <!-- ======================================================== -->
 
-                <!-- <article class="col-block">
+                <article class="col-block">
                     
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
                                 <img src="images/thumbs/post/tulips-400.jpg" 
-                                     srcset="images/thumbs/post/tulips-400.jpg 1x, images/thumbs/post/tulips-800.jpg 2x" alt="">
+                                        srcset="images/thumbs/post/tulips-400.jpg 1x, images/thumbs/post/tulips-800.jpg 2x" alt="">
                             </a>
                         </div>
         
@@ -255,9 +166,9 @@
                                 <a href="single-standard.html">June 14, 2018</a>
                             </div>
                         </div>
-                    </div> item-entry
+                    </div> <!-- item-entry -->
     
-                </article> end article
+                </article> <!-- end article -->
 
                 <article class="col-block">
                     
@@ -265,7 +176,7 @@
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
                                 <img src="images/thumbs/post/music-400.jpg" 
-                                     srcset="images/thumbs/post/music-400.jpg 1x, images/thumbs/post/music-800.jpg 2x" alt="">
+                                        srcset="images/thumbs/post/music-400.jpg 1x, images/thumbs/post/music-800.jpg 2x" alt="">
                             </a>
                         </div>
         
@@ -280,9 +191,9 @@
                                 <a href="single-standard.html">June 14, 2018</a>
                             </div>
                         </div>
-                    </div> item-entry
+                    </div> <!-- item-entry -->
     
-                </article> end article
+                </article> <!-- end article -->
 
                 <article class="col-block">
                 
@@ -290,7 +201,7 @@
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
                                 <img src="images/thumbs/post/watch-400.jpg" 
-                                     srcset="images/thumbs/post/watch-400.jpg 1x, images/thumbs/post/watch-800.jpg 2x" alt="">
+                                        srcset="images/thumbs/post/watch-400.jpg 1x, images/thumbs/post/watch-800.jpg 2x" alt="">
                             </a>
                         </div>
         
@@ -305,9 +216,9 @@
                                 <a href="single-standard.html">June 12, 2018</a>
                             </div>
                         </div>
-                    </div> item-entry
+                    </div> <!-- item-entry -->
 
-                </article> end article
+                </article> <!-- end article -->
 
                 <article class="col-block">
                 
@@ -315,7 +226,7 @@
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
                                 <img src="images/thumbs/post/wheel-400.jpg" 
-                                     srcset="images/thumbs/post/wheel-400.jpg 1x, images/thumbs/post/wheel-800.jpg 2x" alt="">
+                                        srcset="images/thumbs/post/wheel-400.jpg 1x, images/thumbs/post/wheel-800.jpg 2x" alt="">
                             </a>
                         </div>
         
@@ -330,9 +241,9 @@
                                 <a href="single-standard.html">June 12, 2017</a>
                             </div>
                         </div>
-                    </div> item-entry
+                    </div> <!-- item-entry -->
     
-                </article> end article
+                </article> <!-- end article -->
 
                 <article class="col-block">
                 
@@ -340,7 +251,7 @@
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
                                 <img src="images/thumbs/post/guitarist-400.jpg" 
-                                     srcset="images/thumbs/post/guitarist-400.jpg 1x, images/thumbs/post/guitarist-800.jpg 2x" alt="">
+                                        srcset="images/thumbs/post/guitarist-400.jpg 1x, images/thumbs/post/guitarist-800.jpg 2x" alt="">
                             </a>
                         </div>
         
@@ -355,9 +266,9 @@
                                 <a href="single-standard.html">June 02, 2018</a>
                             </div>
                         </div>
-                    </div> item-entry
+                    </div> <!-- item-entry -->
     
-                </article> end article
+                </article> <!-- end article -->
 
                 <article class="col-block">
                 
@@ -365,7 +276,7 @@
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
                                 <img src="images/thumbs/post/jump-400.jpg" 
-                                     srcset="images/thumbs/post/jump-400.jpg 1x, images/thumbs/post/jump-800.jpg 2x" alt="">
+                                        srcset="images/thumbs/post/jump-400.jpg 1x, images/thumbs/post/jump-800.jpg 2x" alt="">
                             </a>
                         </div>
         
@@ -380,9 +291,9 @@
                                 <a href="single-standard.html">June 02, 2018</a>
                             </div>
                         </div>
-                    </div> item-entry
+                    </div> <!-- item-entry -->
     
-                </article> end article
+                </article> <!-- end article -->
 
                 <article class="col-block">
                 
@@ -390,7 +301,7 @@
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
                                 <img src="images/thumbs/post/flowers-400.jpg" 
-                                     srcset="images/thumbs/post/flowers-400.jpg 1x, images/thumbs/post/flowers-800.jpg 2x" alt="">
+                                        srcset="images/thumbs/post/flowers-400.jpg 1x, images/thumbs/post/flowers-800.jpg 2x" alt="">
                             </a>
                         </div>
         
@@ -405,9 +316,9 @@
                                 <a href="single-standard.html">June 01, 2018</a>
                             </div>
                         </div>
-                    </div> item-entry
+                    </div> <!-- item-entry -->
     
-                </article> end article
+                </article> <!-- end article -->
 
                 <article class="col-block">
                 
@@ -415,7 +326,7 @@
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
                                 <img src="images/thumbs/post/woodcraft-400.jpg" 
-                                     srcset="images/thumbs/post/woodcraft-400.jpg 1x, images/thumbs/post/woodcraft-800.jpg 2x" alt="">
+                                        srcset="images/thumbs/post/woodcraft-400.jpg 1x, images/thumbs/post/woodcraft-800.jpg 2x" alt="">
                             </a>
                         </div>
         
@@ -430,9 +341,9 @@
                                 <a href="single-standard.html">May 30, 2018</a>
                             </div>
                         </div>
-                    </div> item-entry
+                    </div> <!-- item-entry -->
     
-                </article> end article
+                </article> <!-- end article -->
 
                 <article class="col-block">
                 
@@ -440,7 +351,7 @@
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
                                 <img src="images/thumbs/post/fuji-400.jpg" 
-                                     srcset="images/thumbs/post/fuji-400.jpg 1x, images/thumbs/post/fuji-800.jpg 2x" alt="">
+                                        srcset="images/thumbs/post/fuji-400.jpg 1x, images/thumbs/post/fuji-800.jpg 2x" alt="">
                             </a>
                         </div>
         
@@ -455,9 +366,9 @@
                                 <a href="single-standard.html">May 30, 2018</a>
                             </div>
                         </div>
-                    </div> item-entry
+                    </div> <!-- item-entry -->
     
-                </article> end article
+                </article> <!-- end article -->
 
                 <article class="col-block">
                 
@@ -465,7 +376,7 @@
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
                                 <img src="images/thumbs/post/beetle-400.jpg" 
-                                     srcset="images/thumbs/post/beetle-400.jpg 1x, images/thumbs/post/beetle-800.jpg 2x" alt="">
+                                        srcset="images/thumbs/post/beetle-400.jpg 1x, images/thumbs/post/beetle-800.jpg 2x" alt="">
                             </a>
                         </div>
         
@@ -480,9 +391,9 @@
                                 <a href="single-standard.html">May 28, 2018</a>
                             </div>
                         </div>
-                    </div> item-entry
+                    </div> <!-- item-entry -->
     
-                </article> end article
+                </article> <!-- end article -->
 
                 <article class="col-block">
                 
@@ -490,7 +401,7 @@
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
                                 <img src="images/thumbs/post/sydney-400.jpg" 
-                                     srcset="images/thumbs/post/sydney-400.jpg 1x, images/thumbs/post/sydney-800.jpg 2x" alt="">
+                                        srcset="images/thumbs/post/sydney-400.jpg 1x, images/thumbs/post/sydney-800.jpg 2x" alt="">
                             </a>
                         </div>
         
@@ -505,9 +416,9 @@
                                 <a href="single-standard.html">May 28, 2018</a>
                             </div>
                         </div>
-                    </div> item-entry
+                    </div> <!-- item-entry -->
     
-                </article> --> <!-- end article -->
+                </article> <!-- end article -->
 
             </div> <!-- end entries -->
         </div> <!-- end entries-wrap -->
@@ -516,15 +427,15 @@
             <div class="col-full">
                 <nav class="pgn" data-aos="fade-up">
                     <ul>
-                        <!-- <li><a class="pgn__prev" href="#0">Prev</a></li> -->
-                        <li><span class="pgn__num current">1</span></li>
-                        <!-- <li><a class="pgn__num" href="#0">2</a></li>
+                        <li><a class="pgn__prev" href="#0">Prev</a></li>
+                        <li><a class="pgn__num" href="#0">1</a></li>
+                        <li><span class="pgn__num current">2</span></li>
                         <li><a class="pgn__num" href="#0">3</a></li>
                         <li><a class="pgn__num" href="#0">4</a></li>
                         <li><a class="pgn__num" href="#0">5</a></li>
                         <li><span class="pgn__num dots">…</span></li>
-                        <li><a class="pgn__num" href="#0">8</a></li> -->
-                        <!-- <li><a class="pgn__next" href="#0">Next</a></li> -->
+                        <li><a class="pgn__num" href="#0">8</a></li>
+                        <li><a class="pgn__next" href="#0">Next</a></li>
                     </ul>
                 </nav>
             </div>
@@ -540,24 +451,19 @@
         <div class="row">
 
             <div class="col-seven md-six tab-full popular">
-                <h3>인기 포스트</h3>
+                <h3>Popular Posts</h3>
 
                 <div class="block-1-2 block-m-full popular__posts">
-                
-                	<!-- 작성된 게시글이 없을 때 -->
-                	<h6>작성된 게시글이 없습니다.</h6>
-                
-                    <!-- <article class="col-block popular__post">
+                    <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
                             <img src="images/thumbs/small/tulips-150.jpg" alt="">
                         </a>
                         <h5>10 Interesting Facts About Caffeine.</h5>
                         <section class="popular__meta">
-                            <span class="popular__author"><a href="#0">John Doe</a></span><br>
-                            <span class="popular__date"><time datetime="2018-06-14">Jun 14, 2018</time></span>
+                            <span class="popular__author"><span>By</span> <a href="#0">John Doe</a></span>
+                            <span class="popular__date"><span>on</span> <time datetime="2018-06-14">Jun 14, 2018</time></span>
                         </section>
                     </article>
-                    
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
                             <img src="images/thumbs/small/wheel-150.jpg" alt="">
@@ -568,7 +474,6 @@
                             <span class="popular__date"><span>on</span> <time datetime="2018-06-12">Jun 12, 2018</time></span>
                         </section>
                     </article>
-                    
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
                             <img src="images/thumbs/small/shutterbug-150.jpg" alt="">
@@ -579,7 +484,6 @@
                             <span class="popular__date"><span>on</span> <time datetime="2018-06-12">Jun 12, 2018</time></span>
                         </section>
                     </article>
-                    
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
                             <img src="images/thumbs/small/cookies-150.jpg" alt="">
@@ -590,7 +494,6 @@
                             <span class="popular__date"><span>on</span> <time datetime="2018-06-12">Jun 12, 2018</time></span>
                         </section>
                     </article>
-                    
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
                             <img src="images/thumbs/small/beetle-150.jpg" alt="">
@@ -601,7 +504,6 @@
                             <span class="popular__date"><span>on</span> <time datetime="2018-06-12">Jun 12, 2018</time></span>
                         </section>
                     </article>
-                    
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
                             <img src="images/thumbs/small/salad-150.jpg" alt="">
@@ -611,31 +513,26 @@
                             <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                             <span class="popular__date"><span>on</span> <time datetime="2018-06-12">Jun 12, 2018</time></span>
                         </section>
-                    </article> -->
-                    
+                    </article>
                 </div> <!-- end popular_posts -->
             </div> <!-- end popular -->
 
             <div class="col-four md-six tab-full end">
                 <div class="row">
                     <div class="col-six md-six mob-full categories">
-                        <h3>카테고리</h3>
+                        <h3>Categories</h3>
         
-        				<!-- 등록된 카테고리가 없을 때 -->
-        				<h6>등록된 카테고리가 없습니다.</h6>
-        				<a href="#" class="read-more-sample-3">만들기</a>
-        
-                        <!-- <ul class="linklist">
+                        <ul class="linklist">
                             <li><a href="#0">Lifestyle</a></li>
                             <li><a href="#0">Travel</a></li>
                             <li><a href="#0">Recipes</a></li>
                             <li><a href="#0">Management</a></li>
                             <li><a href="#0">Health</a></li>
                             <li><a href="#0">Creativity</a></li>
-                        </ul> -->
+                        </ul>
                     </div> <!-- end categories -->
         
-                    <!-- <div class="col-six md-six mob-full sitelinks">
+                    <div class="col-six md-six mob-full sitelinks">
                         <h3>Site Links</h3>
         
                         <ul class="linklist">
@@ -646,7 +543,7 @@
                             <li><a href="#0">Contact</a></li>
                             <li><a href="#0">Privacy Policy</a></li>
                         </ul>
-                    </div> --> <!-- end sitelinks -->
+                    </div> <!-- end sitelinks -->
                 </div>
             </div>
         </div> <!-- end row -->
