@@ -27,7 +27,7 @@ public class BoardDAO {  //MemberDAO
 	//select count(*) from board->select count(*) from member; ->getMemberCount()
 	
 	public String getTitle(String url) {
-		String title="1234"; //타이틀 이름
+		String title=""; //타이틀 이름
 		try {
 			con=pool.getConnection();
 			System.out.println("con="+con);
@@ -48,7 +48,7 @@ public class BoardDAO {  //MemberDAO
 	}
 			
 	public int getB_numCount(String url) {
-		int b_numCount=3; //상단게시판 개수
+		int b_numCount=0; //상단게시판 개수
 		try {
 			con=pool.getConnection();
 			System.out.println("con="+con);
@@ -69,9 +69,96 @@ public class BoardDAO {  //MemberDAO
 		return b_numCount;
 	}
 	
+	private BoardDTO makeArticle() throws Exception{
+		BoardDTO article=new BoardDTO();
+		
+		article.setB_num(rs.getInt("b_num"));
+		article.setB_title(rs.getString("b_title"));
+		article.setB_order(rs.getInt("b_order"));
+		
+//		article.setNum(rs.getInt("num"));
+//		article.setWriter(rs.getString("writer"));
+//		article.setEmail(rs.getString("email"));
+//		article.setSubject(rs.getString("subject"));
+//		article.setPasswd(rs.getString("passwd"));
+//		article.setReg_date(rs.getTimestamp("reg_date"));//오늘날짜->코딩 now()
+//		article.setReadcount(rs.getInt("readcount"));//default->0
+//		article.setRef(rs.getInt("ref"));//그룹번호->신규글과 답변글 묶어주는 번호
+//		article.setRe_step(rs.getInt("re_step"));//답변글의 순서
+//		article.setRe_level(rs.getInt("re_level"));//들여쓰기(답변의 깊이)
+//		article.setContent(rs.getString("content"));//글내용
+//		article.setIp(rs.getString("ip"));
+		return article;
+	}
+	
+	public List getArticles(String url) { 
+		List articleList=null;		
+		try {
+		con=pool.getConnection();
+		sql="select * from board where url=?"; //1,10
+		pstmt=con.prepareStatement(sql);
+		pstmt.setString(1, url);
+		rs=pstmt.executeQuery();
+		if(rs.next()) {
+			articleList=new ArrayList();
+			do {
+				BoardDTO article=makeArticle();
+				articleList.add(article);
+			}while(rs.next());
+		}
+		}catch(Exception e) {
+			System.out.println("getArticles()메서드 에러유발"+e);
+		}finally {
+			pool.freeConnection(con, pstmt,rs);
+		}
+		return articleList;
+	}
 	
 	
+//	public List getArticles2(String url) { 
+//		List articleList=null;		
+//		try {
+//		con=pool.getConnection();
+//		sql="select * from post where url=?"; //1,10
+//		pstmt=con.prepareStatement(sql);
+//		pstmt.setString(1, url);
+//		rs=pstmt.executeQuery();
+//		if(rs.next()) {
+//			articleList=new ArrayList();
+//			do {
+//				BoardDTO article=makeArticle();
+//				articleList.add(article);
+//			}while(rs.next());
+//		}
+//		}catch(Exception e) {
+//			System.out.println("getArticles2()메서드 에러유발"+e);
+//		}finally {
+//			pool.freeConnection(con, pstmt,rs);
+//		}
+//		return articleList;
+//	}
 	
+	
+	public int getP_numCount(String url) { //전체 게시물 개수
+		int p_numCount=0; 
+		try {
+			con=pool.getConnection();
+			System.out.println("con="+con);
+			sql="select count(*) from post where url=?"; 
+			pstmt=con.prepareStatement(sql);
+			pstmt.setString(1, url);
+			rs=pstmt.executeQuery();
+			if(rs.next()) { 
+				p_numCount=rs.getInt(1);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("getP_numCount()메서드 에러"+e);
+		}finally {
+			pool.freeConnection(con, pstmt, rs);
+		}
+		return p_numCount;
+	}
 	
 	
 	
@@ -113,6 +200,7 @@ public class BoardDAO {  //MemberDAO
 		}
 		return x;
 	}
+	
 	//2.글목록보기에 대한 메서드 구현->레코드가 한개이상=>한페이지당 10개씩 끊어서 보여준다
 	//1.레코드의 시작번호   2.불러올 레코드의 갯수
 	public List getArticles(int start,int end) { //getMemberArticle(int start,int end)

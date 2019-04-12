@@ -10,10 +10,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
+	<%
+		BoardDAO dbPro = new BoardDAO(); 	
+		String title=dbPro.getTitle("0");
+		int b_numCount = dbPro.getB_numCount("0");
+		int p_numCount = 0;//dbPro.getP_numCount("0");
+	%>
     <!-- Title -->
     <title><%= title%> <%=b_numCount %></title>
-
+	<c:set property="" scope="" value=""></c:set>
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
 

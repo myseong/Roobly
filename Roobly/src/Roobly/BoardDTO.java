@@ -4,6 +4,10 @@ import java.sql.Timestamp;
 
 public class BoardDTO {
 
+	private int b_num; //게시판 번호
+	private String b_title; //게시판 이름
+	private int b_order; //게시판 순서
+	
 	private int num; // 게시물 번호
 	private String writer; // 작성자
 	private String subject; // 글제목
@@ -125,5 +129,31 @@ public class BoardDTO {
 	public void setFile(String file) {
 		this.file = file;
 	}
+
+	public int getB_num() {
+		return b_num;
+	}
+
+	public void setB_num(int b_num) {
+		this.b_num = b_num;
+	}
+
+	public String getB_title() {
+		return b_title;
+	}
+
+	public void setB_title(String b_title) {
+		this.b_title = b_title;
+	}
+
+	public int getB_order() {
+		return b_order;
+	}
+
+	public void setB_order(int b_order) {
+		this.b_order = b_order;
+	}
+	
+	
 
 }

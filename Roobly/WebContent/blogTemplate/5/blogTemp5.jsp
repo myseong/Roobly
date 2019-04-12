@@ -12,8 +12,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title><%= title%> <%=b_numCount %></title>
-
+    <title>${title }</title>
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
 
@@ -90,7 +89,7 @@
                 <!-- Logo Area Start -->
                 <div class="col-12">
                     <div class="logo_area text-center">
-                        <a href="index.html" class="yummy-logo"><%= title%></a>
+                        <a href="index.html" class="yummy-logo">${title }</a>
                     </div>
                 </div>
             </div>
@@ -105,14 +104,12 @@
                                 <li class="nav-item active">
                                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                                 </li>
-                                <%
-								    	for(int i = 0; i < b_numCount ; i++){ //아티클 이용해얌
-								    		BoardDTO article = (BoardDTO)dbPro.getArticles("0").get(i);
-							    %>
+                               
+                                	<c:forEach var="article" items="${articleList}"></c:forEach>
 							    		 <li class="nav-item">
-                                   			<a class="nav-link" href="./board.jsp?b_num=<%="3" %>&url=<%="0"%>"><%=article.getB_title() %></a> <!-- index.jsp 대신 데베에 저장된 게시판 jsp를 가져옴 -->
+                                   			<a class="nav-link" href="./board.jsp?b_num=${article.getB_num()}&url=${url}">${article.getB_title() }</a> <!-- index.jsp 대신 데베에 저장된 게시판 jsp를 가져옴 -->
                            		 		</li>
-						     	<%}%>
+					
                             </ul>
                         </div>
                     </nav>
@@ -258,9 +255,8 @@
                     <div class="row">
 
                         <!-- 작성된 게시글이 없을 때 -->
-                        <% 
-                        System.out.print(p_numCount);
-                        if(p_numCount == 0){ %>
+                        
+             
                         <div class="col-12">
                             <div class="single-post wow fadeInUp" data-wow-delay=".2s">
                                     <a href="#">
@@ -269,7 +265,7 @@
                                     <a href="#" class="read-more-sample">글쓰기</a>
                             </div>
                         </div>
-                        <%}else{ %>
+                       
 						<div class="col-12">
                             <div class="single-post wow fadeInUp" data-wow-delay=".2s">
                                 <!-- Post Thumb -->
@@ -314,7 +310,7 @@
                             </div>
                         </div>
 						
-						<%} %>
+					
                        <!-- 작성된 게시글이 없을 때  -->
                         <div class="col-12 col-md-6">
                             <div class="single-post wow fadeInUp" data-wow-delay=".4s">
