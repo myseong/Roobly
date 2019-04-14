@@ -9,13 +9,14 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Original - Lifestyle Blog Template</title>
+    <title>블로그 이름 - 포스트</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/add-2.css">
 
 </head>
 
@@ -27,8 +28,9 @@
         </div>
     </div>
 
+	<!-- ===============팝업창 띄우는 부분============== -->
     <!-- Subscribe Modal -->
-    <div class="subscribe-newsletter-area">
+    <!-- <div class="subscribe-newsletter-area">
         <div class="modal fade" id="subsModal" tabindex="-1" role="dialog" aria-labelledby="subsModal" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -43,31 +45,34 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
 
+		<!--======================= 왼쪽 상단 글자 슬라이드 부분=================== -->
         <!-- Top Header Area -->
         <div class="top-header">
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
+                
                     <!-- Breaking News Area -->
                     <div class="col-12 col-sm-8">
                         <div class="breaking-news-area">
                             <div id="breakingNewsTicker" class="ticker">
                                 <ul>
-                                    <li><a href="#">Hello World!</a></li>
-                                    <li><a href="#">Hello Universe!</a></li>
-                                    <li><a href="#">Hello Original!</a></li>
+                                    <li><a href="#">환영합니다!</a></li>
+                                    <li><a href="#">블로거 닉네임(이름)</a></li>
+                                    <!-- <li><a href="#">Hello Original!</a></li>
                                     <li><a href="#">Hello Earth!</a></li>
-                                    <li><a href="#">Hello Colorlib!</a></li>
+                                    <li><a href="#">Hello Colorlib!</a></li> -->
                                 </ul>
                             </div>
                         </div>
                     </div>
+                    
                     <!-- Top Social Area -->
-                    <div class="col-12 col-sm-4">
+                    <!-- <div class="col-12 col-sm-4">
                         <div class="top-social-area">
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -76,7 +81,8 @@
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Behance"><i class="fa fa-behance" aria-hidden="true"></i></a>
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </div>
-                    </div>
+                    </div> -->
+                    
                 </div>
             </div>
         </div>
@@ -86,7 +92,7 @@
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
                     <div class="col-12">
-                        <a href="index.html" class="original-logo"><img src="img/core-img/logo.png" alt=""></a>
+                        <a href="index.html" class="original-logo font2">블로그 이름<!-- <img src="img/core-img/logo.png" alt=""> --></a>
                     </div>
                 </div>
             </div>
@@ -101,7 +107,7 @@
 
                         <!-- Subscribe btn -->
                         <div class="subscribe-btn">
-                            <a href="#" class="btn subscribe-btn" data-toggle="modal" data-target="#subsModal">Subscribe</a>
+                            <!-- <a href="#" class="btn subscribe-btn" data-toggle="modal" data-target="#subsModal">Subscribe</a> -->
                         </div>
 
                         <!-- Navbar Toggler -->
@@ -120,7 +126,7 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="#">Pages</a>
+                                    <!-- <li><a href="#">Pages</a>
                                         <ul class="dropdown">
                                             <li><a href="index.html">Home</a></li>
                                             <li><a href="about-us.html">About Us</a></li>
@@ -191,13 +197,14 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="contact.html">Contact</a></li> -->
+                                    
                                 </ul>
 
                                 <!-- Search Form  -->
                                 <div id="search-wrapper">
                                     <form action="#">
-                                        <input type="text" id="search" placeholder="Search something...">
+                                        <input type="text" id="search" placeholder="검색어를 입력하세요">
                                         <div id="close-icon"></div>
                                         <input class="d-none" type="submit" value="">
                                     </form>
@@ -224,7 +231,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="post-date">
-                                    <a href="#">12 <span>march</span></a>
+                                    <a href="#"><span>작성일</span></a>
                                 </div>
                             </div>
                         </div>
@@ -242,11 +249,11 @@
                         <!-- Blog Content -->
                         <div class="single-blog-content">
                             <div class="line"></div>
-                            <a href="#" class="post-tag">Lifestyle</a>
-                            <h4><a href="#" class="post-headline mb-0">Party people in the house</a></h4>
+                            <a href="#" class="post-tag">카테고리 이름</a>
+                            <h4><a href="#" class="post-headline mb-0">게시글 제목</a></h4>
                             <div class="post-meta mb-50">
-                                <p>By <a href="#">james smith</a></p>
-                                <p>3 comments</p>
+                                <p><a href="#">작성자</a></p>
+                                <p>댓글<span>0</span>개</p>
                             </div>
                             <p>Curabitur venenatis efficitur lorem sed tempor. Integer aliquet tempor cursus. Nullam vestibulum convallis risus vel condimentum. Nullam auctor lorem in libero luctus, vel volutpat quam tincidunt. Nullam vestibulum convallis risus vel condimentum. Nullam auctor lorem in libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id. Quisque at erat eu libero consequat tempus. Quisque molestie convallis tempus. Ut semper purus metus, a euismod sapien sodales ac. Duis viverra eleifend fermentum. Donec sagittis lacus sit amet augue sodales, vel cursus enim tristique. Maecenas vitae massa ut est consectetur sagittis quis vitae tortor. Sed et massa vel nisi dapibus pretium et et leo.</p>
 
@@ -257,7 +264,7 @@
                     </div>
 
                     <!-- About Author -->
-                    <div class="blog-post-author mt-100 d-flex">
+                    <!-- <div class="blog-post-author mt-100 d-flex">
                         <div class="author-thumbnail">
                             <img src="img/bg-img/b6.jpg" alt="">
                         </div>
@@ -267,22 +274,27 @@
                             <h4><a href="#" class="author-name">James Morrison</a></h4>
                             <p>Curabitur venenatis efficitur lorem sed tempor. Integer aliquet tempor cursus. Nullam vestibulum convallis risus vel condimentum. Nullam auctor lorem in libero luctus, vel volutpat quam tincidunt. Nullam vestibulum convallis risus vel condimentum. Nullam auctor lorem in libero.</p>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Comment Area Start -->
                     <div class="comment_area clearfix mt-70">
-                        <h5 class="title">Comments</h5>
+                        <h5 class="title">댓글 <span>0</span>개</h5>
 
                         <ol>
+                        
+                        <!-- =============작성된 댓글이 없을 때============== -->
+                        <h6 class="font1">작성된 댓글이 없습니다.</h6>
+                        
                             <!-- Single Comment Area -->
-                            <li class="single_comment_area">
-                                <!-- Comment Content -->
+                            <!-- <li class="single_comment_area">
+                            
+                                Comment Content
                                 <div class="comment-content d-flex">
-                                    <!-- Comment Author -->
+                                    Comment Author
                                     <div class="comment-author">
                                         <img src="img/bg-img/b7.jpg" alt="author">
                                     </div>
-                                    <!-- Comment Meta -->
+                                    Comment Meta
                                     <div class="comment-meta">
                                         <a href="#" class="post-date">March 12</a>
                                         <p><a href="#" class="post-author">William James</a></p>
@@ -290,15 +302,16 @@
                                         <a href="#" class="comment-reply">Reply</a>
                                     </div>
                                 </div>
+                                
                                 <ol class="children">
                                     <li class="single_comment_area">
-                                        <!-- Comment Content -->
+                                        Comment Content
                                         <div class="comment-content d-flex">
-                                            <!-- Comment Author -->
+                                            Comment Author
                                             <div class="comment-author">
                                                 <img src="img/bg-img/b7.jpg" alt="author">
                                             </div>
-                                            <!-- Comment Meta -->
+                                            Comment Meta
                                             <div class="comment-meta">
                                                 <a href="#" class="post-date">March 12</a>
                                                 <p><a href="#" class="post-author">William James</a></p>
@@ -308,17 +321,19 @@
                                         </div>
                                     </li>
                                 </ol>
+                                
                             </li>
 
-                            <!-- Single Comment Area -->
+                            Single Comment Area
                             <li class="single_comment_area">
-                                <!-- Comment Content -->
+                            
+                                Comment Content
                                 <div class="comment-content d-flex">
-                                    <!-- Comment Author -->
+                                    Comment Author
                                     <div class="comment-author">
                                         <img src="img/bg-img/b7.jpg" alt="author">
                                     </div>
-                                    <!-- Comment Meta -->
+                                    Comment Meta
                                     <div class="comment-meta">
                                         <a href="#" class="post-date">March 12</a>
                                         <p><a href="#" class="post-author">William James</a></p>
@@ -326,16 +341,19 @@
                                         <a href="#" class="comment-reply">Reply</a>
                                     </div>
                                 </div>
-                            </li>
+                                
+                            </li> -->
+                            
                         </ol>
                     </div>
 
                     <div class="post-a-comment-area mt-70">
-                        <h5>Leave a reply</h5>
+                        <h5>댓글달기</h5>
                         <!-- Reply Form -->
                         <form action="#" method="post">
                             <div class="row">
-                                <div class="col-12 col-md-6">
+                            
+                                <!-- <div class="col-12 col-md-6">
                                     <div class="group">
                                         <input type="text" name="name" id="name" required>
                                         <span class="highlight"></span>
@@ -343,6 +361,7 @@
                                         <label>Name</label>
                                     </div>
                                 </div>
+                                
                                 <div class="col-12 col-md-6">
                                     <div class="group">
                                         <input type="email" name="email" id="email" required>
@@ -351,6 +370,7 @@
                                         <label>Email</label>
                                     </div>
                                 </div>
+                                
                                 <div class="col-12">
                                     <div class="group">
                                         <input type="text" name="subject" id="subject" required>
@@ -358,18 +378,21 @@
                                         <span class="bar"></span>
                                         <label>Subject</label>
                                     </div>
-                                </div>
+                                </div> -->
+                                
                                 <div class="col-12">
                                     <div class="group">
                                         <textarea name="message" id="message" required></textarea>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
-                                        <label>Comment</label>
+                                        <!-- <label>Comment</label> -->
                                     </div>
                                 </div>
+                                
                                 <div class="col-12">
-                                    <button type="submit" class="btn original-btn">Reply</button>
+                                    <button type="submit" class="btn original-btn">등록</button>
                                 </div>
+                                
                             </div>
                         </form>
                     </div>
@@ -382,13 +405,13 @@
                         <!-- Widget Area -->
                         <div class="sidebar-widget-area">
                             <form action="#" class="search-form">
-                                <input type="search" name="search" id="searchForm" placeholder="Search">
+                                <input type="search" name="search" id="searchForm" placeholder="검색어를 입력하세요">
                                 <input type="submit" value="submit">
                             </form>
                         </div>
 
                         <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
+                        <!-- <div class="sidebar-widget-area">
                             <h5 class="title subscribe-title">Subscribe to my newsletter</h5>
                             <div class="widget-content">
                                 <form action="#" class="newsletterForm">
@@ -396,43 +419,51 @@
                                     <button type="submit" class="btn original-btn">Subscribe</button>
                                 </form>
                             </div>
+                        </div> -->
+
+                        <!-- Widget Area -->
+                        <div class="sidebar-widget-area">
+                            <div class="sidebar-box p-4 about text-center ftco-animate">
+					          <h5 class="heading mb-4 font1">블로거 닉네임(이름)</h5>
+					          <img src="img/blog-img/author.jpg" class="img-fluid rounded-circle" alt="Colorlib Template">
+					          <!-- <img src="http://placehold.it/500x500"> -->
+					          <div class="text pt-4">
+					          	<p>간단한 소개</p>
+					          </div>
+			        		</div>
+                            
+                            <!-- <a href="#"><img src="img/bg-img/add.gif" alt=""></a> -->
                         </div>
 
                         <!-- Widget Area -->
                         <div class="sidebar-widget-area">
-                            <h5 class="title">Advertisement</h5>
-                            <a href="#"><img src="img/bg-img/add.gif" alt=""></a>
-                        </div>
-
-                        <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">Latest Posts</h5>
+                            <h5 class="title">인기 포스트</h5>
 
                             <div class="widget-content">
 
-                                <!-- Single Blog Post -->
+                                <!-- ================작성된 게시글이 없을 때=============== -->
                                 <div class="single-blog-post d-flex align-items-center widget-post">
                                     <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
+                                    <!-- div class="post-thumbnail">
                                         <img src="img/blog-img/lp1.jpg" alt="">
-                                    </div>
+                                    </div> -->
                                     <!-- Post Content -->
                                     <div class="post-content">
-                                        <a href="#" class="post-tag">Lifestyle</a>
-                                        <h4><a href="#" class="post-headline">Party people in the house</a></h4>
+                                        <!-- <a href="#" class="post-tag">Lifestyle</a> -->
+                                        <h4><a href="#" class="post-headline">작성된 게시글이 없습니다.</a></h4>
                                         <div class="post-meta">
-                                            <p><a href="#">12 March</a></p>
+                                            <!-- <p><a href="#">12 March</a></p> -->
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Single Blog Post -->
-                                <div class="single-blog-post d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
+                                <!-- <div class="single-blog-post d-flex align-items-center widget-post">
+                                    Post Thumbnail
                                     <div class="post-thumbnail">
                                         <img src="img/blog-img/lp2.jpg" alt="">
                                     </div>
-                                    <!-- Post Content -->
+                                    Post Content
                                     <div class="post-content">
                                         <a href="#" class="post-tag">Lifestyle</a>
                                         <h4><a href="#" class="post-headline">A sunday in the park</a></h4>
@@ -440,15 +471,15 @@
                                             <p><a href="#">12 March</a></p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <!-- Single Blog Post -->
-                                <div class="single-blog-post d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
+                                <!-- <div class="single-blog-post d-flex align-items-center widget-post">
+                                    Post Thumbnail
                                     <div class="post-thumbnail">
                                         <img src="img/blog-img/lp3.jpg" alt="">
                                     </div>
-                                    <!-- Post Content -->
+                                    Post Content
                                     <div class="post-content">
                                         <a href="#" class="post-tag">Lifestyle</a>
                                         <h4><a href="#" class="post-headline">Party people in the house</a></h4>
@@ -456,15 +487,15 @@
                                             <p><a href="#">12 March</a></p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <!-- Single Blog Post -->
-                                <div class="single-blog-post d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
+                                <!-- <div class="single-blog-post d-flex align-items-center widget-post">
+                                    Post Thumbnail
                                     <div class="post-thumbnail">
                                         <img src="img/blog-img/lp4.jpg" alt="">
                                     </div>
-                                    <!-- Post Content -->
+                                    Post Content
                                     <div class="post-content">
                                         <a href="#" class="post-tag">Lifestyle</a>
                                         <h4><a href="#" class="post-headline">A sunday in the park</a></h4>
@@ -472,12 +503,13 @@
                                             <p><a href="#">12 March</a></p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
+                                
                             </div>
                         </div>
 
                         <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
+                        <!-- <div class="sidebar-widget-area">
                             <h5 class="title">Tags</h5>
                             <div class="widget-content">
                                 <ul class="tags">
@@ -491,7 +523,8 @@
                                     <li><a href="#">adventure</a></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
+                        
                     </div>
                 </div>
             </div>
@@ -500,7 +533,7 @@
     <!-- ##### Single Blog Area End ##### -->
 
     <!-- ##### Instagram Feed Area Start ##### -->
-    <div class="instagram-feed-area">
+    <!-- <div class="instagram-feed-area">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -510,66 +543,66 @@
                 </div>
             </div>
         </div>
-        <!-- Instagram Slides -->
+        Instagram Slides
         <div class="instagram-slides owl-carousel">
-            <!-- Single Insta Feed -->
+            Single Insta Feed
             <div class="single-insta-feed">
                 <img src="img/instagram-img/1.png" alt="">
-                <!-- Hover Effects -->
+                Hover Effects
                 <div class="hover-effects">
                     <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
                 </div>
             </div>
-            <!-- Single Insta Feed -->
+            Single Insta Feed
             <div class="single-insta-feed">
                 <img src="img/instagram-img/2.png" alt="">
-                <!-- Hover Effects -->
+                Hover Effects
                 <div class="hover-effects">
                     <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
                 </div>
             </div>
-            <!-- Single Insta Feed -->
+            Single Insta Feed
             <div class="single-insta-feed">
                 <img src="img/instagram-img/3.png" alt="">
-                <!-- Hover Effects -->
+                Hover Effects
                 <div class="hover-effects">
                     <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
                 </div>
             </div>
-            <!-- Single Insta Feed -->
+            Single Insta Feed
             <div class="single-insta-feed">
                 <img src="img/instagram-img/4.png" alt="">
-                <!-- Hover Effects -->
+                Hover Effects
                 <div class="hover-effects">
                     <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
                 </div>
             </div>
-            <!-- Single Insta Feed -->
+            Single Insta Feed
             <div class="single-insta-feed">
                 <img src="img/instagram-img/5.png" alt="">
-                <!-- Hover Effects -->
+                Hover Effects
                 <div class="hover-effects">
                     <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
                 </div>
             </div>
-            <!-- Single Insta Feed -->
+            Single Insta Feed
             <div class="single-insta-feed">
                 <img src="img/instagram-img/6.png" alt="">
-                <!-- Hover Effects -->
+                Hover Effects
                 <div class="hover-effects">
                     <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
                 </div>
             </div>
-            <!-- Single Insta Feed -->
+            Single Insta Feed
             <div class="single-insta-feed">
                 <img src="img/instagram-img/7.png" alt="">
-                <!-- Hover Effects -->
+                Hover Effects
                 <div class="hover-effects">
                     <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- ##### Instagram Feed Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
@@ -599,11 +632,11 @@
                                 <div class="classynav">
                                     <ul>
                                         <li><a href="#">Home</a></li>
-                                        <li><a href="#">About Us</a></li>
+                                        <!-- <li><a href="#">About Us</a></li>
                                         <li><a href="#">Lifestyle</a></li>
                                         <li><a href="#">travel</a></li>
                                         <li><a href="#">Music</a></li>
-                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="#">Contact</a></li> -->
                                     </ul>
                                 </div>
                                 <!-- Nav End -->

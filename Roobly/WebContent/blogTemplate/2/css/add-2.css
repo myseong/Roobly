@@ -1,0 +1,31 @@
+@charset "EUC-KR";
+
+.font1 {
+	font-family: 'Poppins';
+}
+
+.font2 {
+	font-family: 'Poppins';
+	font-size: 35px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto; 
+}
+
+.read-more-sample {
+    font-size: 12px;
+    color: #000;
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 30px;
+    height: 40px;
+    min-width: 130px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.read-more-sample:hover {
+	background-color: #ebebeb;
+}
