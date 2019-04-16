@@ -154,7 +154,7 @@ input, select, textarea {
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
 		color: #f56a6a;
-		text-decoration: none;
+		text-decoration: none !important;
 	}
 
 		a:hover {
@@ -2467,7 +2467,7 @@ input, select, textarea {
 		color: #f56a6a !important;
 		cursor: pointer;
 		display: inline-block;
-		font-family: "Roboto Slab", serif;
+		font-family: "Poppins"; /* "Roboto Slab", serif; */
 		font-size: 0.8em;
 		font-weight: 700;
 		height: 3.5em;
@@ -3313,7 +3313,7 @@ input, select, textarea {
 		#header .logo {
 			border-bottom: 0;
 			color: inherit;
-			font-family: "Roboto Slab", serif;
+			font-family: "Poppins"; /* , serif */
 			font-size: 1.125em;
 		}
 
