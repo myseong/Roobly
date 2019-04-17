@@ -3473,7 +3473,7 @@ input, select, textarea {
 		-ms-user-select: none;
 		user-select: none;
 		color: #3d4449;
-		font-family: "Nanum Gothic", serif; /* "Roboto Slab" */
+		font-family: "Nanum Gothic", serif;/* "Roboto Slab" */
 		font-family: 400;
 		letter-spacing: 0.075em;
 		list-style: none;

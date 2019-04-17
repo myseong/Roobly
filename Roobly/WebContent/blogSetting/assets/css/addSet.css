@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+* {
+	margin: 0;
+	padding: 0;
+}
+
 .font1 {
 	font-family: 'Poppins';
 }
@@ -30,3 +35,11 @@
 	padding-top: 15px;
 	padding-left: 5px;
 }
+
+.pagination {
+	text-align: center;
+	justify-content:center;
+}
+
+
+	
