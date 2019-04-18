@@ -16,5 +16,10 @@ $(function() {
 		$('#main').load('topMenu.html #content')
 		return false
 	})
+	
+	$('#categorySet').click(function() {
+		$('#main').load('categorySet.html #content')
+		return false
+	})
 
 })

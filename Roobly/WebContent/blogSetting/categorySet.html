@@ -21,9 +21,12 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+  <body>
   <!-- <div id="wrapper"> -->
 
 				<!-- Main -->
+			<div id="content">	
+			
 					<div id="main">
 						<div class="inner">
 
@@ -52,11 +55,46 @@
 									  <tbody>
 									  	<tr>
 									  		
+									  		<td>
+									  			<div class="col-12 col-md-3 list_btn_updown category_updown">
+													<a href="#" class="upup">
+														<img height="22" width="21" alt="위로 이동" class="up _nclk(edt_topmenu.up)" src="https://blogimgs.pstatic.net/nblog/admin50/btn_step_up.gif">
+													</a>
+													<br><a href="#">
+														<img height="22" width="21" alt="아래로 이동" class="down _nclk(edt_topmenu.down)" src="https://blogimgs.pstatic.net/nblog/admin50/btn_step_down.gif">
+													</a>
+												</div>
+									  		</td>
+									  		
 									  	<!-- 기존 메뉴박스 -->
 									  		<td>
 									  
-										<div class="col-12 col-md-6 category_list_area" style="width:227px;">
-											<div class="category_heading">블로그 카테고리</div>
+										<div class="col-12 col-md-3 category_list_area" style="width:227px;">
+											<div class="list_btn">
+												<ul class="actions small">
+												   <!-- ====== 카테고리 추가 ======== -->
+													<li class="category_add"><a href="#" width="87" height="20" class="category_add category_button small">카테고리 추가</a></li>
+														<!-- <a href="#">
+															<img width="87" height="20" alt="카테고리 추가" src="https://blogimgs.pstatic.net/nblog/admin50/btn_add_category.gif"
+														         	class="_addCategoryView _nclk(edt_blog.categoryadd)">
+															</a>-->
+													
+												   <!--====== 구분선 추가======= -->
+													<!-- <a href="#">
+														<img width="77" height="20" alt="구분선 추가" src="https://blogimgs.pstatic.net/nblog/admin50/btn_sectionline.gif"
+														        class="_addLineView _nclk(edt_blog.lineadd)">
+													</a> -->
+													
+												  <!--====== 삭제 ========-->
+												     <li><a href="#" width="44" height="20" id="deleteBtn" class="category_delete category_button small" style="float:right;">삭제</a></li>
+													<!-- <a href="#" id="deleteBtn" style="float:right;">
+														<img width="44" height="20" class="_deleteCategoryView _nclk(edt_blog.delete)"
+														        alt="삭제" src="https://blogimgs.pstatic.net/nblog/admin50/btn_del_category.gif">
+													</a> -->
+												</ul>
+											</div>
+											
+											<!-- <div class="category_heading">블로그 카테고리</div> -->
 											<div class="category_list">
 												<div class="tree">
 													<ul id="tree" style="height:531px;" class="tree1">
@@ -107,34 +145,104 @@
 										</td>
 										
 										
-										수정 후 메뉴박스
-										<td rowspan="2">
-									  
-										<div class="col-12 col-md-6 category_list_area" style="width:227px;">
-											<div class="category_heading">블로그 상단메뉴</div>
-											<div class="category_list">
-												<div class="tree">
-													<ul class="admin_selected_category tree1" style="height:558px;">
+									<!-- 데이터 입력 부분 -->
+										<td class="n_admin">
+											<div class="col-12 col-md-6 div_category_add">
+												<dl>
+													<dt class="category_name">카테고리명</dt>
+													<dd class="category_name">
+														<div>
+															<input type="text" onkeyup="onKeyUp(this.value);" onfocus maxlength="16" class="inp _nclk(edt_blog.categoryname)"
+																		id="category_name">
+															<input type="hidden" name id="category_name_hidden">
+														</div>
+													</dd>
 													
-														<li class="tree-tree-data tree-node_nclk(edt_topmenu.bcategory) tree-last-node">
-															<div class="drag-label list">
-																<label>
-																	<span>카테고리3</span>
-																</label>
-																<button class="tree-button" onfocus="this.blur();">+</button>
-															
+													<dt>공개설정</dt>
+														<dd class="cbox-1">
+															<input type="radio" value="true-1" class="checkbox  _setOpen _nclk(edt_blog.public)"
+																		name="openYn-1" id="pub_c1" checked>
+															<label for="pub_c1">공개</label>
+															<input type="radio" value="false-1" class="checkbox _setClose _nclk(edt_blog.private)"
+																		name="openYn-1" id="pub_c2">
+															<label for="pub_c2">비공개</label>
+														</dd>
+													
+													<dt class="subject_divide">주제분류</dt>
+													<dd class="layerbox">
+														<select name="subject_divide" id="subject_divide">
+											               <option value="0" >선택하지 않음</option>
+											               <option value="1">결혼·육아</option>
+											               <option value="2">맛집</option>
+											               <option value="3">자동차</option>
+											               <option value="4">세계여행</option>
+											               <option value="5">문학·책</option>
+											            </select>
+											        </dd>  
+											 <!-- ===================================================== -->
+														<!-- <ul>
+															<li>
+																<input name="directorySeq" type="radio" id="seq1" value="1" checked>
+																<label for="seq1">선택하지 않음</label>
+															</li>
+															<li>
+																<input name="directorySeq" type="radio" id="seq2" value="2">
+																<label for="seq2">결혼·육아</label>
+															</li>
+															<li>
+																<input name="directorySeq" type="radio" id="seq3" value="3">
+																<label for="seq3">맛집</label>
+															</li>
+															<li>
+																<input name="directorySeq" type="radio" id="seq4" value="4">
+																<label for="seq4">자동차</label>
+															</li>
+															<li>
+																<input name="directorySeq" type="radio" id="seq5" value="5">
+																<label for="seq5">세계여행</label>
+															</li>
+															<li>
+																<input name="directorySeq" type="radio" id="seq6" value="6">
+																<label for="seq6">문학·책</label>
+															</li>
+														</ul> -->
+														<!-- <div class="theme_select _nclk(edt_blog.theme)" id="theme_select_bar" style="cursor:pointer"
+																onclick="directoryList.toggle();" onmouseover="directoryList.overout('show');"
+																onmouseout="directoryList.overout('hide');">
+															<a href="#" id="theme_select_button" onclick="return false;">주제분류 선택하지 않음</a>
+														</div>
+														<div style="display: none;" id="themeSelectLayer" class="theme_select_layer">
+															<div class="layer_content">
+																<ul id="theme_list" class="theme_list">
+																	<li class="first">엔터테인먼트/예술
+																		<ul>
+																			<li><input name="directorySeq" type="radio" id="seq5" value="5">
+																					<label for="seq5">문학/책</label>
+																			</li>
+																		</ul>
+																	</li>
+																</ul>
 															</div>
-															
-														</li>
-														
-													</ul>
+														</div> -->
+											<!-- ===================================================== -->
 													
-												</div>
-												
+													<dt>댓글설정</dt>
+														<dd class="cbox-2">
+															<input type="radio" value="true-2" class="checkbox  _setOpen _nclk(edt_blog.public)"
+																		name="openYn-2" id="pub_c3" checked>
+															<label for="pub_c3">공개</label>
+															<input type="radio" value="false-2" class="checkbox _setClose _nclk(edt_blog.private)"
+																		name="openYn-2" id="pub_c4">
+															<label for="pub_c4">비공개</label>
+														</dd>
+													
+													
+													
+												</dl>
 											</div>
-											
-										</div>
-										</td> -->
+										</td>
+										
+										
 										
 												</tr>
 											</tbody>
@@ -168,6 +276,8 @@
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/ajax.js"></script>
 			<script src="/Roobly/blogSetting/assets/js/addSet.js"></script>
+			
+		</div>
 
 	</body>
 </html>

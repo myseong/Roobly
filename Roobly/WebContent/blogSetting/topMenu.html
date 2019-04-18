@@ -12,7 +12,6 @@
 
 <link rel="stylesheet" href="assets/css/main.css" />
 <link rel="stylesheet" href="assets/css/addSet.css" />
-<link rel="stylesheet" href="assets/css/topMenu.css" />
 
 <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
 <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
@@ -114,7 +113,17 @@
 
 										<div class="col-12 col-md-6 category_list_area"
 											style="width: 227px;">
-											<div class="category_heading">블로그 상단메뉴</div>
+											<div class="category_heading">블로그 상단메뉴
+												<div class="list_btn_updown menu_updown">
+													<a href="#">
+														<img height="22" width="21" alt="위로 이동" class="up _nclk(edt_topmenu.up)" src="https://blogimgs.pstatic.net/nblog/admin50/btn_step_up.gif">
+													</a>
+													<a href="#">
+														<img height="22" width="21" alt="아래로 이동" class="down _nclk(edt_topmenu.down)" src="https://blogimgs.pstatic.net/nblog/admin50/btn_step_down.gif">
+													</a>
+												</div>
+											</div>
+											
 											<div class="category_list">
 												<div class="tree">
 													<ul class="admin_selected_category tree1"
@@ -151,11 +160,10 @@
 
 						<div class="pm">
 							<ul class="actions small">
-								<li><a href="#" class="category_add button primary small">추가</a></li>
-								<li><a href="#"
-									class="category_remove button primary small">삭제</a></li>
+								<li><a href="#" class="topmenu_add button primary small">추가</a></li>
+								<li><a href="#" class="topmenu_delete button primary small">삭제</a></li>
 								&nbsp;&nbsp;&nbsp;
-								<li><a href="#" class="category_save button primary small">저장</a></li>
+								<li><a href="#" class="topmenu_save button primary small">저장</a></li>
 							</ul>
 						</div>
 
